@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root{
+    --navbar: 92%;
+    --sidebar: 8%;
+    --content: 3%;
+}
+
+@media screen and (min-width: 1280px) {
+    .main__section-h1{
+        background-size: cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('../img/hunters-race-MYbhN8KaaEc-unsplash.jpg') no-repeat center;
+        background-size: cover;
+    }
+}
+
+
+.form__group input:focus ~ label,
+.form__group input:valid ~ label{
+    top:-12px;
+    font-size:12px;
+}
+
+/**/
+
+.navbar{
+    width: 100%;
+}
+
+.sidebar {
+    top: 0;
+    width: var(--sidebar);
+    height: 100vh;
+    font-size: 0.65em;
+}
+
+
+@media(min-width: 1280px){
+    .navbar {
+        width: var(--navbar);
+        right: 0;
+        top: 0;
+    }
+
+    .content {
+        width: var(--navbar);
+        margin-left: var(--sidebar);
+        margin-top: var(--content);
+    }
+
+    .menu {
+        width: calc(100% - var(--sidebar));
+    }
+}
+
